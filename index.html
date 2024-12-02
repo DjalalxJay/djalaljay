@@ -3,9 +3,89 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Djalal Jay - Home</title>
+    <link rel="stylesheet" href="global.css">
+    <style>
+        div.titlescreen {
+            background-color: aqua;
+            width: 100%;
+            height: 100vh;
+            display:flex;
+            justify-content: center;
+            align-items: center;
+        }
+        /*ImageContainer*/
+        div.titlelogo {
+            width: 30%;
+            background-color: blueviolet;
+            position: relative;
+        }
+        img.titlelogo {
+            width: 100%;
+        }
+        /* Spinning */
+        @keyframes spin {
+            from { transform: rotate(0deg) }
+            to { transform: rotate(360deg) }
+        }
+        img.titlegear {
+            width: 7%;
+            position: absolute;
+            top: 15%;
+            left: 14.2%;
+            animation: spin 45s linear infinite;
+        }
+
+        .main {
+            background-color: black;
+            width: 100%;
+            height: 3000px;
+            text-align: center;
+            overflow: hidden;
+        }
+        .contentcontainer {
+            display: inline-block;
+            background-color: #3f3f3fad;
+            backdrop-filter: blur(30px);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            border-radius: 20px;
+            width: 90%;
+            height: 2000px;
+            margin: 5px;
+        }
+        .backgroundgear {
+            position: absolute;
+            width: 70%;
+            left: 50%;
+            height: auto;
+            top: 150%;
+            animation: spin 120s linear infinite;
+        }
+    </style>
 </head>
 <body>
+    <!-- Hauptseite-->
+     <div class="titlescreen">
+        <div class="titlelogo">
+            <img class="titlelogo" src="resources/images/logowithoutgear.png">
+            <img class="titlegear" src="resources/images/gear.png">
+        </div>
+     </div>
+     <div class="main">
+        <img class="backgroundgear" src="resources/images/gear.png">
+        <div class="contentcontainer">
+            hallo
+        </div>
+     </div>
+
+     <!-- kaka-->
     <h1>Hi</h1>
+    <a href="sites/gayrate/gayrate.html">zu gayrate</a>
+    <a href="sites/parallax.html">zu parallax</a>
+
+    <!-- Javascript-->
+     <script>
+
+     </script>
 </body>
 </html>
