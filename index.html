@@ -6,21 +6,50 @@
     <title>Djalal Jay - Home</title>
     <link rel="stylesheet" href="global.css">
     <style>
-        div.titlescreen {
-            background-color: aqua;
-            width: 100%;
-            height: 100vh;
-            display:flex;
+        .wrapper {
+            height: 118vh;
+            overflow-y: auto;
+            overflow-x: hidden;
+            perspective: 10px;
+        }
+        /* Parallax Start */
+        .parallax {
+            position: relative;
+            display: flex;
             justify-content: center;
             align-items: center;
+            height: 100%;
+            transform-style: preserve-3d;
+            z-index: -1;
         }
-        /*ImageContainer*/
-        div.titlelogo {
-            width: 30%;
-            background-color: blueviolet;
-            position: relative;
+        .layer0,.layer1,.layer2,.layer3,.layer4,.layer5,.layer6,.layer7,.layer8,.layer9,.layer10,.layer11,.layer12,.logocontainer {
+            position: absolute;
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            z-index: -1;
         }
-        img.titlelogo {
+        .layer0 { transform: translateZ(-120px) scale(13); }
+        .layer1 { transform: translateZ(-110px) scale(12); }
+        .layer2 { transform: translateZ(-100px) scale(11); }
+        .layer3 { transform: translateZ(-90px) scale(10); }
+        .layer4 { transform: translateZ(-80px) scale(9); }
+        .layer5 { transform: translateZ(-70px) scale(8); }
+        .layer6 { transform: translateZ(-60px) scale(7); }
+        .layer7 { transform: translateZ(-50px) scale(6); }
+        .layer8 { transform: translateZ(-40px) scale(5); }
+        .layer9 { transform: translateZ(-30px) scale(4); }
+        .layer10 { transform: translateZ(-20px) scale(3); }
+        .layer11 { transform: translateZ(-10px) scale(2); }
+        .layer12 { transform: translateZ(0px) scale(1); }
+
+        .logocontainer {
+            transform: translateZ(-95px) scale(2) translateY(-100%);
+        }
+        .logo {
+            left: 0;
+            top: 0;
+            position: absolute;
             width: 100%;
         }
         /* Spinning */
@@ -28,60 +57,95 @@
             from { transform: rotate(0deg) }
             to { transform: rotate(360deg) }
         }
-        img.titlegear {
-            width: 7%;
+        .logogear {
             position: absolute;
-            top: 15%;
-            left: 14.2%;
-            animation: spin 45s linear infinite;
+            left: 13.9%;
+            top: 10%;
+            width: 8%;
+            animation: spin 30s linear infinite;
         }
 
+        /* Parallax End */
         .main {
-            background-color: black;
-            width: 100%;
-            height: 3000px;
-            text-align: center;
-            overflow: hidden;
+            padding: 2rem;
+            background-color: rgb(0, 0, 0);
+            font-family: Arial, Helvetica, sans-serif;
         }
-        .contentcontainer {
-            display: inline-block;
-            background-color: #3f3f3fad;
-            backdrop-filter: blur(30px);
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            border-radius: 20px;
-            width: 90%;
-            height: 2000px;
-            margin: 5px;
+        .tab {
+            margin: auto;
+            width: 50%;
+            min-width: 300px;
+            background-color: hsl(0, 0%, 11%);
+            padding: 20px;
+            border-radius: 10px;
         }
-        .backgroundgear {
-            position: absolute;
-            width: 70%;
-            left: 50%;
-            height: auto;
-            top: 150%;
-            animation: spin 120s linear infinite;
+        .caption {
+            font-size: 20px;
+            font-weight: bold;
+            color: hsl(0, 0%, 100%);
         }
+        .paragraph {
+            color: hsl(0, 0%, 90%);
+            font-size: 16px;
+        }
+
+        .showcaseimg {
+            width: 50%;
+            min-width: 300px;
+        }
+
     </style>
 </head>
 <body>
     <!-- Hauptseite-->
-     <div class="titlescreen">
-        <div class="titlelogo">
-            <img class="titlelogo" src="resources/images/logowithoutgear.png">
-            <img class="titlegear" src="resources/images/gear.png">
+    <div class="wrapper">
+        <div class="parallax">
+            <img src="resources/images/parallax/Layer0.png" class="layer0">
+            <img src="resources/images/parallax/Layer1.png" class="layer1">
+            <img src="resources/images/parallax/Layer2.png" class="layer2">
+            <div class="logocontainer">
+                <img src="resources/images/logowithoutgear.png" class="logo">
+                <img src="resources/images/gearblack.png" class="logogear">
+            </div>
+            <img src="resources/images/parallax/Layer3.png" class="layer3">
+            <img src="resources/images/parallax/Layer4.png" class="layer4">
+            <img src="resources/images/parallax/Layer5.png" class="layer5">
+            <img src="resources/images/parallax/Layer6.png" class="layer6">
+            <img src="resources/images/parallax/Layer7.png" class="layer7">
+            <img src="resources/images/parallax/Layer8.png" class="layer8">
+            <img src="resources/images/parallax/Layer9.png" class="layer9">
+            <img src="resources/images/parallax/Layer10.png" class="layer10">
+            <img src="resources/images/parallax/Layer11.png" class="layer11">
+            <img src="resources/images/parallax/Layer12.png" class="layer12">
         </div>
-     </div>
-     <div class="main">
-        <img class="backgroundgear" src="resources/images/gear.png">
-        <div class="contentcontainer">
-            hallo
-        </div>
-     </div>
+        <div class="main">
 
-     <!-- kaka-->
-    <h1>Hi</h1>
-    <a href="sites/gayrate/gayrate.html">zu gayrate</a>
-    <a href="sites/parallax.html">zu parallax</a>
+            <div class="tab">
+                <div class="caption">COMING SOON</div>
+                <div class="spacer" style="height: 20px;"></div>
+                <div class="paragraph">
+                    Hallo Welt, hier ist es gerade noch leer bevor es mehr geben wird. also seit gespannt und alles. Ich weiß das Ding oben sieht hässlich und hingerotzt aus, aber das ist nur temporär.
+                </div>
+            </div>
+
+            <div class="spacer" style="height: 100px;"></div>
+
+            <div class="tab">
+                <div class="paragraph">Bis dahin gibt es random Bilder</div>
+                <div class="spacer" style="height: 50px;"></div>
+                <div class="caption">Gilbert</div>
+                <img src="resources/kaka/hundgilbert.jpg" class="showcaseimg">
+                <div class="spacer" style="height: 50px;"></div>
+                <div class="caption">Flo's Katze </div>
+                <img src="resources/kaka/katzeflo.jpg" class="showcaseimg">
+            </div>
+
+            <div class="spacer" style="height: 100px;"></div>
+            <a href="sites/gayrate/gayrate.html">zu gayrate</a>
+        </div>
+    </div>
+
+
 
     <!-- Javascript-->
      <script>
