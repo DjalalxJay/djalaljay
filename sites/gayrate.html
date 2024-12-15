@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Djalal Jay - Gayrate</title>
+    <link rel="stylesheet" href="global.css">
+</head>
+<body>
+    <a href="../../index.html">zurück</a>
+    <button onclick="generateRandomNumber()">generate gayrate</button>
+    <p id="ausgabe">nichts</p>
+    <script>
+        document.getElementById("ausgabe").textContent = "hallo" + temp
+
+        function generateRandomNumber() {
+            random = (Math.random() * 101 -1) | 0;
+            document.getElementById("ausgabe").textContent = "Du bist zu " + random + "% Gay.";
+        }
+    </script>
+</body>
+</html>
